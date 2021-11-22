@@ -2,13 +2,17 @@ package com.floorfy.test.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 public class User {
 
     private final UUID id;
+    @NotBlank
     private final String email;
+    @NotBlank
     private final String name;
+    @NotBlank
     private final String phone;
 
     public User(@JsonProperty("id") UUID id,
